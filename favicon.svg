@@ -1,8 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="512" height="512">
   <rect width="64" height="64" rx="15" fill="#13212E"/>
-  <circle cx="32" cy="32" r="19" fill="none" stroke="#F6F3EE" stroke-width="4"/>
-  <path d="M32 32 L32 15 A17 17 0 0 1 46.72 23.5 Z" fill="#E3A33B"/>
-  <path d="M32 32 L32 21" stroke="#F6F3EE" stroke-width="3.6" stroke-linecap="round"/>
-  <path d="M32 32 L40 37" stroke="#F6F3EE" stroke-width="3.6" stroke-linecap="round"/>
-  <circle cx="32" cy="32" r="3" fill="#F6F3EE"/>
+  <g transform="translate(32 32) scale(.82) translate(-32 -32)"><defs><clipPath id="skyf"><rect x="0" y="0" width="64" height="37.7"/></clipPath></defs>
+  <circle cx="32" cy="32" r="22" fill="none" stroke="#F6F3EE" stroke-width="3"/>
+  <g clip-path="url(#skyf)"><circle class="sun" cx="32" cy="39" r="8.4" fill="#E3A33B"/></g>
+  <path d="M17 39 H47" stroke="#F6F3EE" stroke-width="2.6" stroke-linecap="round"/>
+  <path class="water" d="M24 44.5 H40 M28.5 49.5 H35.5" stroke="#F6F3EE" stroke-width="2.6" stroke-linecap="round"/>
+  <path class="min" d="M32 26 V15" stroke="#F6F3EE" stroke-width="2.8" stroke-linecap="round"/>
+  <path class="hr" d="M32 26 L37.5 22.8" stroke="#F6F3EE" stroke-width="2.8" stroke-linecap="round"/>
+  <circle cx="32" cy="26" r="2.1" fill="#F6F3EE"/></g>
 </svg>
