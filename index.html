@@ -7,13 +7,13 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:title" content="Spare Hour">
-<meta property="og:description" content="Made to measure. Your hour, given back. Small, custom systems for Trumbull businesses and creators.">
+<meta property="og:description" content="Custom AI systems that give Trumbull businesses and creators their hours back.">
 <meta property="og:image" content="https://apatterson-droid.github.io/spare-hour-site/og-image.jpg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
 
-<meta name="description" content="Spare Hour makes small, made-to-measure systems that give Trumbull businesses and creators their time back.">
+<meta name="description" content="Custom AI systems that give Trumbull businesses and creators their hours back.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@400;500;600;700;800&display=swap">
@@ -94,7 +94,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .dial { justify-self: center; width: min(440px, 100%); aspect-ratio: 1; max-width: 100%; position: relative; }
 .dial canvas, .dial .face { position: absolute; inset: 0; width: 100%; height: 100%; }
 .dial .face { display: grid; place-items: center; }
-.dial .face svg { width: 46%; height: 46%; filter: drop-shadow(0 24px 40px rgba(0,0,0,.35)); }
+.dial .face svg { width: 48%; height: 48%; filter: drop-shadow(0 12px 28px rgba(0,0,0,.4)); }
 .hallmarks { border-top: 1px solid var(--rule-dk); }
 .hallmarks .wrap { display: grid; grid-template-columns: repeat(3, 1fr); padding-block: 0; }
 .hallmarks div { padding: 22px 0; display: flex; gap: 14px; align-items: baseline; font-size: 15px; color: var(--pale); }
@@ -107,13 +107,12 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   .hallmarks div + div { border-left: 0; padding-left: 0; border-top: 1px solid var(--rule-dk); }
 }
 
-/* golden hour: hands rewind, then the sun comes up over the water */
+/* golden hour: hands rewind, then the sun comes up over the water. Plays once, when .play is added. */
 .min, .hr { transform-origin: 32px 26px; transform-box: view-box; }
-.min { animation: rewind 3.6s cubic-bezier(.65,0,.35,1) infinite; }
-.hr { animation: hour 3.6s cubic-bezier(.65,0,.35,1) infinite; }
-.sun { animation: rise 3.6s cubic-bezier(.22,1,.36,1) infinite; }
-.water { animation: shimmer 3.6s ease infinite; }
-.brand .min, .brand .hr, .brand .sun, .brand .water { animation: none; }
+.play .min { animation: rewind 3.6s cubic-bezier(.65,0,.35,1) .4s 1 both; }
+.play .hr { animation: hour 3.6s cubic-bezier(.65,0,.35,1) .4s 1 both; }
+.play .sun { animation: rise 3.6s cubic-bezier(.22,1,.36,1) .4s 1 both; }
+.play .water { animation: shimmer 3.6s ease .4s 1 both; }
 @keyframes rewind { 0%,8% { transform: rotate(0) } 42%,100% { transform: rotate(-360deg) } }
 @keyframes hour { 0%,8% { transform: rotate(0) } 42%,58% { transform: rotate(-30deg) } 92%,100% { transform: rotate(0) } }
 @keyframes rise { 0%,8% { transform: translateY(0) } 30%,46% { transform: translateY(9px) } 76%,100% { transform: translateY(0) } }
@@ -241,7 +240,7 @@ section.s { padding-block: 120px; }
 /* contact */
 .contact { text-align: center; background: radial-gradient(900px 500px at 50% 0%, #1C3045 0%, var(--navy) 60%, var(--night) 100%); }
 .contact .wrap { padding-block: 128px; display: flex; flex-direction: column; align-items: center; }
-.contact .mini { width: 64px; height: 64px; margin-bottom: 30px; }
+.contact .mini { width: 56px; height: 56px; margin-bottom: 28px; }
 .contact h2 { font-family: var(--serif); font-size: clamp(42px, 6vw, 80px); line-height: 1; letter-spacing: -1.6px; font-weight: 320; }
 .contact h2 em { color: var(--gold); }
 .contact p { color: var(--pale); font-size: 18px; margin: 22px auto 0; max-width: 30em; }
@@ -270,7 +269,7 @@ footer i { font-family: var(--serif); color: var(--gold); }
       <a class="l" href="#work">The work</a>
       <a class="l" href="#rates">Rates</a>
       <a class="l" href="#about">About</a>
-      <a class="btn btn-gold" href="#contact">Book a fitting</a>
+      <a class="btn btn-gold" href="#contact">Book a call</a>
     </nav>
   </div>
 </header>
@@ -285,24 +284,24 @@ footer i { font-family: var(--serif); color: var(--gold); }
     <div>
       <div class="cap">Trumbull, Connecticut · By appointment</div>
       <h1>Made to measure. <em>Your hour, given back.</em></h1>
-      <p class="sub">Small, custom systems for local businesses and creators. Built around how you already work, in your voice, on tools you already own. Never off the rack.</p>
+      <p class="sub">Custom AI systems for local businesses and creators. Built on the tools you already use, in your voice.</p>
       <div class="ctas">
-        <a class="btn btn-gold" href="#contact">Book a free fitting <span class="arr" aria-hidden="true"></span></a>
+        <a class="btn btn-gold" href="#contact">Book a free call <span class="arr" aria-hidden="true"></span></a>
         <a class="link" href="#fitting">Find your lost hours</a>
       </div>
     </div>
     <div class="dial" aria-hidden="true">
       <canvas id="dial"></canvas>
       <div class="face">
-        <svg viewBox="0 0 64 64"><rect width="64" height="64" rx="15" fill="#F6F3EE"/><g transform="translate(32 32) scale(.82) translate(-32 -32)"><defs><clipPath id="skyf"><rect width="64" height="37.7"/></clipPath></defs><circle cx="32" cy="32" r="22" fill="none" stroke="#13212E" stroke-width="3"/><g clip-path="url(#skyf)"><circle class="sun" cx="32" cy="39" r="8.4" fill="#E3A33B"/></g><path d="M17 39 H47" stroke="#13212E" stroke-width="2.6" stroke-linecap="round"/><path class="water" d="M24 44.5 H40 M28.5 49.5 H35.5" stroke="#13212E" stroke-width="2.6" stroke-linecap="round"/><path class="min" d="M32 26 V15" stroke="#13212E" stroke-width="2.8" stroke-linecap="round"/><path class="hr" d="M32 26 L37.5 22.8" stroke="#13212E" stroke-width="2.8" stroke-linecap="round"/><circle cx="32" cy="26" r="2.1" fill="#13212E"/></g></svg>
+        <svg id="heromark" viewBox="6 6 52 52"><defs><clipPath id="skyf"><rect width="64" height="37.7"/></clipPath></defs><circle cx="32" cy="32" r="22" fill="none" stroke="#F6F3EE" stroke-width="3"/><g clip-path="url(#skyf)"><circle class="sun" cx="32" cy="39" r="8.4" fill="#E3A33B"/></g><path d="M17 39 H47" stroke="#F6F3EE" stroke-width="2.6" stroke-linecap="round"/><path class="water" d="M24 44.5 H40 M28.5 49.5 H35.5" stroke="#F6F3EE" stroke-width="2.6" stroke-linecap="round"/><path class="min" d="M32 26 V15" stroke="#F6F3EE" stroke-width="2.8" stroke-linecap="round"/><path class="hr" d="M32 26 L37.5 22.8" stroke="#F6F3EE" stroke-width="2.8" stroke-linecap="round"/><circle cx="32" cy="26" r="2.1" fill="#F6F3EE"/></svg>
       </div>
     </div>
   </div>
   <div class="hallmarks">
     <div class="wrap">
-      <div><span>i.</span> Nothing new to buy to start</div>
-      <div><span>ii.</span> It drafts. You approve.</div>
-      <div><span>iii.</span> Quoted before any work</div>
+      <div><span>i.</span> No new software to buy</div>
+      <div><span>ii.</span> Nothing sends without your OK</div>
+      <div><span>iii.</span> Price agreed up front</div>
     </div>
   </div>
 </section>
@@ -310,17 +309,16 @@ footer i { font-family: var(--serif); color: var(--gold); }
 <section class="s paper" id="fitting">
   <div class="wrap">
     <div class="sh">
-      <div class="cap">The fitting</div>
-      <div><h2>What's eating <em>your week?</em></h2><p>Choose what sounds familiar. You'll get the order I'd work in, leaks first.</p></div>
+      <div class="cap">Quick check</div>
+      <div><h2>What's eating <em>your week?</em></h2><p>Tap what applies. See what I'd fix first.</p></div>
     </div>
     <div class="fit body-col" style="margin-left:0">
       <div class="opts" id="opts" role="group" aria-label="What takes your time"></div>
       <div class="order" aria-live="polite">
-        <h3>Your order of work</h3>
-        <div class="for">Cut to what you chose</div>
-        <p class="empty" id="empty">Choose at least one on the left.</p>
+        <h3>Where I'd start</h3>
+        <p class="empty" id="empty">Tap anything to see your plan.</p>
         <ol id="orderlist"></ol>
-        <div class="foot"><a class="btn btn-gold" href="#contact">Bring this to a fitting <span class="arr" aria-hidden="true"></span></a></div>
+        <div class="foot"><a class="btn btn-gold" href="#contact">Book a call about this <span class="arr" aria-hidden="true"></span></a></div>
       </div>
     </div>
   </div>
@@ -330,13 +328,13 @@ footer i { font-family: var(--serif); color: var(--gold); }
   <div class="wrap">
     <div class="sh">
       <div class="cap">The process</div>
-      <div><h2>Measured first. <em>Cut to fit.</em></h2><p>No big rollout. Each piece works on its own before the next one starts.</p></div>
+      <div><h2>Measured first. <em>Cut to fit.</em></h2><p>One piece at a time. Each one works before the next starts.</p></div>
     </div>
     <div class="steps">
-      <div class="step"><div class="rn">i</div><h3>Measure</h3><p>A free 30-minute call. Where your hours go, and what not to touch.</p></div>
-      <div class="step"><div class="rn">ii</div><h3>Cut</h3><p>Fix the leaks first. Follow-ups that never sent. Leads you never answered.</p></div>
-      <div class="step"><div class="rn">iii</div><h3>Fit</h3><p>Add one piece at a time, in your voice, until it runs the way you work.</p></div>
-      <div class="step"><div class="rn">iv</div><h3>Hand over</h3><p>A short guide and a session together. It's yours. If it breaks, you call me.</p></div>
+      <div class="step"><div class="rn">i</div><h3>Measure</h3><p>A free 30-minute call on where your hours go.</p></div>
+      <div class="step"><div class="rn">ii</div><h3>Cut</h3><p>Fix the leaks first: missed follow-ups, unanswered leads.</p></div>
+      <div class="step"><div class="rn">iii</div><h3>Fit</h3><p>Add pieces one at a time, in your voice.</p></div>
+      <div class="step"><div class="rn">iv</div><h3>Hand over</h3><p>A short guide and a walkthrough. It's yours. I'm a call away.</p></div>
     </div>
   </div>
 </section>
@@ -345,7 +343,7 @@ footer i { font-family: var(--serif); color: var(--gold); }
   <div class="wrap">
     <div class="sh">
       <div class="cap">The work</div>
-      <div><h2>Six things I make. <em>None of them off the rack.</em></h2></div>
+      <div><h2>Six things I build. <em>All made to measure.</em></h2></div>
     </div>
     <div class="menu" id="menu"></div>
   </div>
@@ -356,14 +354,14 @@ footer i { font-family: var(--serif); color: var(--gold); }
     <div class="two">
       <div class="local">
         <div class="cap">For local businesses</div>
-        <h3>For the studio owner who knows every client by name.</h3>
-        <p>You built it from zero. The agencies sell franchise packages. You need a few hours back and a system you understand.</p>
-        <ul><li>Trial and no-show follow-ups that actually send</li><li>Win-back notes to past customers</li><li>A month of posts in twenty minutes</li></ul>
+        <h3>For the owner who knows every client by name.</h3>
+        <p>You need hours back and a system you understand. Not an agency package.</p>
+        <ul><li>Follow-ups that actually send</li><li>Win-back notes to past customers</li><li>A month of posts in twenty minutes</li></ul>
       </div>
       <div class="creator">
         <div class="cap">For creators and coaches</div>
         <h3>You create. <em>The system sells.</em></h3>
-        <p>You already have the audience. What's missing is a backend you trust to turn attention into sales.</p>
+        <p>You have the audience. I build the backend that turns it into sales.</p>
         <ul><li>Email sequences for your list</li><li>Course pages with upsells at checkout</li><li>DM replies in your voice</li></ul>
       </div>
     </div>
@@ -374,13 +372,13 @@ footer i { font-family: var(--serif); color: var(--gold); }
   <div class="wrap">
     <div class="sh">
       <div class="cap">Recent work</div>
-      <div><h2>Built, running, <em>and still running.</em></h2></div>
+      <div><h2>Built and <em>still running.</em></h2></div>
     </div>
     <div class="work">
-      <div class="wk"><h3>An AI support agent</h3><p>Reads incoming emails and texts, drafts replies in the company's voice, flags what needs a person.</p><div class="same"><i>For you,</i> follow-ups and DMs that answer themselves.</div></div>
-      <div class="wk"><h3>Segmented outreach</h3><p>Contacts split by who they are, each group with its own sequence and weekly results.</p><div class="same"><i>For you,</i> different notes for members, past customers and new leads.</div></div>
-      <div class="wk"><h3>A proposal builder</h3><p>Call notes in, a branded proposal out in minutes, with a ping when it's opened.</p><div class="same"><i>For you,</i> sales pages made from your outline.</div></div>
-      <div class="wk"><h3>A live operations dashboard</h3><p>Sessions, payments and activity on one screen, updating on its own.</p><div class="same"><i>For you,</i> your numbers in one quiet place.</div></div>
+      <div class="wk"><h3>An AI support agent</h3><p>Drafts replies to emails and texts in the company's voice. Flags what needs a person.</p><div class="same"><i>For you,</i> follow-ups and DMs that answer themselves.</div></div>
+      <div class="wk"><h3>Segmented outreach</h3><p>Each group of contacts gets its own sequence, with weekly results.</p><div class="same"><i>For you,</i> the right note for members, past customers and new leads.</div></div>
+      <div class="wk"><h3>A proposal builder</h3><p>Call notes in. A branded proposal out in minutes.</p><div class="same"><i>For you,</i> sales pages made from your outline.</div></div>
+      <div class="wk"><h3>A live operations dashboard</h3><p>Sessions, payments and activity on one live screen.</p><div class="same"><i>For you,</i> your numbers in one quiet place.</div></div>
     </div>
   </div>
 </section>
@@ -389,15 +387,15 @@ footer i { font-family: var(--serif); color: var(--gold); }
   <div class="wrap">
     <div class="sh">
       <div class="cap">Rates</div>
-      <div><h2>Plainly priced. <em>Quoted before I start.</em></h2></div>
+      <div><h2>Plain pricing. <em>Quoted up front.</em></h2></div>
     </div>
     <div class="rates body-col">
-      <div class="rate"><div class="line"><h3>By the hour</h3><span class="dots"></span><span class="amt">$85<small>/ hour</small></span></div><p>For a single fix or a few pieces at your own pace. Every piece quoted first, billed in half hours, no minimum.</p></div>
-      <div class="rate"><div class="line"><h3>Kept running</h3><span class="dots"></span><span class="amt">from $129<small>/ month</small></span></div><p>Built and looked after. No setup fee. The rate grows only when your system does.</p></div>
-      <div class="rate"><div class="line"><h3>An introduction</h3><span class="dots"></span><span class="amt">$100<small>credit</small></span></div><p>Send me an owner who needs this. Every intro who books a fitting comes off your bill, more if they sign.</p></div>
+      <div class="rate"><div class="line"><h3>By the hour</h3><span class="dots"></span><span class="amt">$85<small>/ hour</small></span></div><p>One fix or a few, at your pace. Quoted first. Billed by the half hour.</p></div>
+      <div class="rate"><div class="line"><h3>Kept running</h3><span class="dots"></span><span class="amt">from $129<small>/ month</small></span></div><p>I keep your system running and improving. Build work is quoted separately.</p></div>
+      <div class="rate"><div class="line"><h3>An introduction</h3><span class="dots"></span><span class="amt">$100<small>credit</small></span></div><p>Refer an owner. When they book a call, $100 comes off your bill. More if they sign.</p></div>
       <div class="founding">
         <div class="seal">FOUNDING<br>CLIENT</div>
-        <p>I'm taking on a small number of founding clients in Trumbull at reduced rates. Ask at your fitting.</p>
+        <p>A few founding clients in Trumbull get reduced rates. Ask on your call.</p>
       </div>
     </div>
   </div>
@@ -412,8 +410,8 @@ footer i { font-family: var(--serif); color: var(--gold); }
     <div>
       <div class="cap">About</div>
       <p class="quote" style="margin-top:18px">"I'd rather give a neighbor <em>five hours back</em> than sell them five tools."</p>
-      <p class="b">I'm Adrian. I live in Trumbull. I've spent my career in tech building sales and support systems from scratch, and today I lead AI and product at a growing tech company. I've also grown brands from nothing to over ten thousand followers, so I know the content grind firsthand.</p>
-      <p class="b">Spare Hour is the small, personal version of that work. I build it with you, I teach you how it runs, and it stays yours.</p>
+      <p class="b">I'm Adrian, a Trumbull neighbor. I lead AI and product at a tech company and have spent my career building sales and support systems from scratch. I've also grown brands past 10,000 followers, so I know the content grind.</p>
+      <p class="b">Spare Hour is the personal version. I build it with you, show you how it runs, and it stays yours.</p>
       <div class="signoff">Adrian Patterson<small>FOUNDER, SPARE HOUR</small></div>
     </div>
   </div>
@@ -423,27 +421,27 @@ footer i { font-family: var(--serif); color: var(--gold); }
   <div class="wrap">
     <div class="sh">
       <div class="cap">Questions</div>
-      <div><h2>Before your <em>fitting.</em></h2></div>
+      <div><h2>Before <em>we talk.</em></h2></div>
     </div>
     <div class="faq body-col">
-      <details><summary>Do I need to buy new software?</summary><p>No. We start with what you already have: ChatGPT, Gmail, Google Drive and your booking or member system. If you outgrow them, I'll tell you, and why.</p></details>
-      <details><summary>Will it sound like a robot?</summary><p>No. I train it on how you actually write and take out the giveaways. Nothing goes out until you've approved it.</p></details>
-      <details><summary>What happens at a fitting?</summary><p>Thirty minutes on where your time goes. You leave with the first two things I'd fix and a rough cost, whether we work together or not.</p></details>
-      <details><summary>How soon will I notice?</summary><p>Most first fixes, like follow-ups that weren't sending, are live within a week.</p></details>
-      <details><summary>What if something breaks?</summary><p>You reach me directly. Small fixes are quick, and you'll know the cost before I start.</p></details>
-      <details><summary>Do you only work in Trumbull?</summary><p>Trumbull and nearby towns in person. Creators and coaches anywhere, over video.</p></details>
+      <details><summary>Do I need to buy new software?</summary><p>No. We start with what you have: Gmail, Google Drive, ChatGPT, your booking system. If you outgrow them, I'll tell you why.</p></details>
+      <details><summary>Will it sound like a robot?</summary><p>No. It learns how you write, and nothing goes out until you approve it.</p></details>
+      <details><summary>What happens on the call?</summary><p>Thirty minutes on where your time goes. You leave with the first two fixes and a rough cost, either way.</p></details>
+      <details><summary>How soon will I notice?</summary><p>Most first fixes are live within a week.</p></details>
+      <details><summary>What if something breaks?</summary><p>You reach me directly. Small fixes are quick, and quoted first.</p></details>
+      <details><summary>Do you only work in Trumbull?</summary><p>In person in Trumbull and nearby towns. Creators and coaches anywhere, by video.</p></details>
     </div>
   </div>
 </section>
 
 <section class="contact" id="contact">
   <div class="wrap">
-    <svg class="mini" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="#F6F3EE"/><g transform="translate(32 32) scale(.82) translate(-32 -32)"><defs><clipPath id="skyc"><rect width="64" height="37.7"/></clipPath></defs><circle cx="32" cy="32" r="22" fill="none" stroke="#13212E" stroke-width="3"/><g clip-path="url(#skyc)"><circle class="sun" cx="32" cy="39" r="8.4" fill="#E3A33B"/></g><path d="M17 39 H47" stroke="#13212E" stroke-width="2.6" stroke-linecap="round"/><path class="water" d="M24 44.5 H40 M28.5 49.5 H35.5" stroke="#13212E" stroke-width="2.6" stroke-linecap="round"/><path class="min" d="M32 26 V15" stroke="#13212E" stroke-width="2.8" stroke-linecap="round"/><path class="hr" d="M32 26 L37.5 22.8" stroke="#13212E" stroke-width="2.8" stroke-linecap="round"/><circle cx="32" cy="26" r="2.1" fill="#13212E"/></g></svg>
+    <svg class="mini" id="minimark" viewBox="6 6 52 52" aria-hidden="true"><defs><clipPath id="skyc"><rect width="64" height="37.7"/></clipPath></defs><circle cx="32" cy="32" r="22" fill="none" stroke="#F6F3EE" stroke-width="3"/><g clip-path="url(#skyc)"><circle class="sun" cx="32" cy="39" r="8.4" fill="#E3A33B"/></g><path d="M17 39 H47" stroke="#F6F3EE" stroke-width="2.6" stroke-linecap="round"/><path class="water" d="M24 44.5 H40 M28.5 49.5 H35.5" stroke="#F6F3EE" stroke-width="2.6" stroke-linecap="round"/><path class="min" d="M32 26 V15" stroke="#F6F3EE" stroke-width="2.8" stroke-linecap="round"/><path class="hr" d="M32 26 L37.5 22.8" stroke="#F6F3EE" stroke-width="2.8" stroke-linecap="round"/><circle cx="32" cy="26" r="2.1" fill="#F6F3EE"/></svg>
     <div class="cap">By appointment</div>
-    <h2 style="margin-top:20px">Book a fitting. <em>Get an hour back.</em></h2>
-    <p>Thirty minutes, free, no pitch deck. You'll leave knowing the first two things to fix.</p>
-    <div class="bring"><span>The tasks that eat your week</span><span>The tools you already use</span><span>One thing you wish ran itself</span></div>
-    <a class="btn btn-gold" id="bookbtn" href="#contact">Book a free fitting <span class="arr" aria-hidden="true"></span></a>
+    <h2 style="margin-top:20px">Book a call. <em>Get an hour back.</em></h2>
+    <p>Thirty free minutes. No pitch. You'll leave with the first two things to fix.</p>
+    <div class="bring"><span>What eats your week</span><span>The tools you use</span><span>One thing you wish ran itself</span></div>
+    <a class="btn btn-gold" id="bookbtn" href="#contact">Book a free call <span class="arr" aria-hidden="true"></span></a>
     <div class="soon" id="soon">Online booking opens soon.</div>
     <div class="mail" id="mailrow"><span style="color:var(--mist)">Or write to</span><b id="mailval"></b><button class="copy" id="copybtn" type="button">Copy</button></div>
   </div>
@@ -464,12 +462,12 @@ const EMAIL = "";
 
 /* Ordered leak-first: this order is the order of work. */
 const FIXES = [
-  { id: "follow", chip: "Following up with trials and new leads", title: "Follow-ups that send themselves", what: "Trial, no-show and new-lead notes that go out on schedule from your booking or member system.", with: "Zen Planner · Mindbody · Calendly · Gmail" },
-  { id: "winback", chip: "Getting past customers to come back", title: "Win-back notes", what: "Your contacts sorted by who they are, each group with its own note in your voice, sent from your own Gmail.", with: "Google Sheets · Gmail · ChatGPT" },
-  { id: "inbox", chip: "Answering the same DMs and emails", title: "An inbox assistant", what: "Drafts the replies you write every day, routes the rest, and hands over when it matters.", with: "Gmail · Instagram · ManyChat" },
-  { id: "content", chip: "Posting on social every week", title: "A content engine", what: "A month of posts drafted from your schedule, in your voice. You approve or skip. It schedules.", with: "ChatGPT · Meta Business Suite" },
-  { id: "sales", chip: "Selling a course or offer online", title: "Sales pages and checkout", what: "Pages made from your outline, with thoughtful upsells at checkout and delivery emails after.", with: "GoHighLevel · Stripe · Kajabi" },
-  { id: "numbers", chip: "Not knowing what's actually working", title: "A quiet dashboard", what: "The handful of numbers that matter, in one place, updating on their own.", with: "Google Sheets · Stripe · your CRM" }
+  { id: "follow", chip: "Following up with new leads", title: "Follow-ups that send themselves", what: "Trial, no-show and new-lead notes that go out on time.", with: "Zen Planner · Mindbody · Calendly · Gmail" },
+  { id: "winback", chip: "Winning back past customers", title: "Win-back notes", what: "The right note to each group, in your voice, from your own Gmail.", with: "Google Sheets · Gmail · ChatGPT" },
+  { id: "inbox", chip: "Answering the same messages", title: "An inbox assistant", what: "Drafts your everyday replies. Hands you the rest.", with: "Gmail · Instagram · ManyChat" },
+  { id: "content", chip: "Posting on social", title: "A content engine", what: "A month of posts in your voice. You approve. It schedules.", with: "ChatGPT · Meta Business Suite" },
+  { id: "sales", chip: "Selling a course or offer", title: "Sales pages and checkout", what: "Pages from your outline, upsells at checkout, delivery emails after.", with: "GoHighLevel · Stripe · Kajabi" },
+  { id: "numbers", chip: "Knowing what's working", title: "A quiet dashboard", what: "The few numbers that matter, in one place, always current.", with: "Google Sheets · Stripe · your CRM" }
 ];
 const ROMAN = ["i", "ii", "iii", "iv", "v", "vi"];
 const esc = (s) => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -525,6 +523,15 @@ function drawDial() {
 drawDial();
 let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(drawDial, 120); });
 
+/* Mark animation: once on load in the hero, once when the contact mark scrolls into view */
+requestAnimationFrame(() => document.getElementById("heromark")?.classList.add("play"));
+(function () {
+  const m = document.getElementById("minimark"); if (!m) return;
+  if (!("IntersectionObserver" in window)) { m.classList.add("play"); return; }
+  const io = new IntersectionObserver((es) => { if (es[0].isIntersecting) { m.classList.add("play"); io.disconnect(); } }, { threshold: .6 });
+  io.observe(m);
+})();
+
 /* Hero film: fades in once it can play; removed quietly if hero.mp4 is missing; still frame for reduced motion */
 (function () {
   const v = document.getElementById("herofilm"); if (!v) return;
@@ -541,7 +548,7 @@ let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(dra
 const book = document.getElementById("bookbtn");
 if (BOOKING_URL) {
   document.querySelectorAll('a.btn[href="#contact"]').forEach(a => { a.href = BOOKING_URL; a.target = "_blank"; a.rel = "noopener"; });
-  document.getElementById("soon").textContent = "Opens Calendly in a new tab. Pick any open 30-minute slot.";
+  document.getElementById("soon").textContent = "Opens Calendly. Pick any open slot.";
 }
 if (EMAIL) {
   document.getElementById("mailval").textContent = EMAIL;
