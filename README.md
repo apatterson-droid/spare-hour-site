@@ -6,7 +6,7 @@ Static one-page site for Spare Hour by Adrian Patterson. Served by GitHub Pages 
 - `adrian.jpg`: About portrait
 - `favicon.svg`, `apple-touch-icon.png`, `og-image.jpg`: icons and the link-preview card
 
-Booking button points to https://calendly.com/adrianlpatterson/30min (set in `BOOKING_URL` near the bottom of `index.html`).
+Booking button points to https://calendar.app.google/b7PijhXUWaQogdnv6 (set in `BOOKING_URL` near the bottom of `index.html`).
 
 ## Brand guidelines
 
