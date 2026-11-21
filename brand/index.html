@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}body{margin:0}</style>
+<title>Spare Hour Brand Guidelines</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: the brand book is set in the brand itself. Navy cover and dark chapters, ivory paper chapters between, gold hairlines. One committed look, as on the website. */
+:root {
+  --night: #0E1924; --navy: #13212E; --navy-2: #1A2B3B;
+  --gold: #E3A33B; --gold-soft: #C99A4E; --gold-ink: #8A5A12;
+  --ivory: #F6F3EE; --paper: #FBF9F5; --ink: #13212E; --muted: #5B636B; --mist: #A7B0BA; --pale: #D5DAE0;
+  --rule: #E3E0DA; --rule-dk: #2A3A4A;
+  --plum: #3A1260; --magenta: #E3347D; --coral: #FF7A59; --peach: #FFD3B8; --white: #FFFFFF;
+  --serif: Fraunces, "Iowan Old Style", Georgia, serif;
+  --sans: Inter, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --wrap: 1080px;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--navy); color: var(--ivory); font: 400 16px/1.65 var(--sans); -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { font-weight: 400; text-wrap: balance; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; border-radius: 2px; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); }
+.cap { font: 600 11px/1.4 var(--sans); letter-spacing: 3px; text-transform: uppercase; color: var(--gold); }
+.paper { background: var(--ivory); color: var(--ink); }
+.paper .cap { color: var(--gold-ink); }
+.dark { background: var(--navy); }
+section.ch { padding-block: 88px; border-top: 1px solid var(--rule-dk); }
+section.paper.ch { border-top-color: var(--rule); }
+.sh { display: grid; grid-template-columns: 200px 1fr; gap: 32px; margin-bottom: 44px; }
+.sh .cap { padding-top: 12px; }
+.sh h2 { font-family: var(--serif); font-size: clamp(32px, 4.4vw, 52px); line-height: 1.05; letter-spacing: -1px; font-weight: 360; }
+.sh h2 em { color: var(--gold); font-weight: 320; }
+.paper .sh h2 em { color: var(--gold-ink); }
+.sh p { margin-top: 14px; max-width: 38em; color: var(--mist); font-size: 17px; }
+.paper .sh p { color: var(--muted); }
+.rn { font-family: var(--serif); font-style: italic; color: var(--gold); }
+.paper .rn { color: var(--gold-ink); }
+code { font: 500 13px var(--mono); }
+@media (max-width: 860px) { .sh { grid-template-columns: 1fr; gap: 10px; } .sh .cap { padding-top: 0; } section.ch { padding-block: 64px; } }
+
+/* cover */
+.cover { background: radial-gradient(1000px 520px at 80% 30%, #1C3045 0%, var(--navy) 55%, var(--night) 100%); }
+.cover .wrap { padding-block: 72px 80px; display: grid; grid-template-columns: 1.2fr .8fr; gap: 40px; align-items: center; }
+.cover h1 { font-family: var(--serif); font-size: clamp(44px, 7vw, 88px); line-height: .98; letter-spacing: -2px; font-weight: 340; margin: 22px 0 22px; font-variation-settings: "opsz" 144; }
+.cover h1 em { color: var(--gold); font-weight: 300; }
+.cover .sub { color: var(--pale); font-size: 18px; max-width: 32em; }
+.cover .meta { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 8px 26px; font-size: 13.5px; color: var(--mist); }
+.cover .meta b { color: var(--ivory); font-weight: 500; }
+.cover .markbox { justify-self: center; width: min(300px, 100%); aspect-ratio: 1; border: 1px solid var(--rule-dk); border-radius: 50%; display: grid; place-items: center; position: relative; }
+.cover .markbox::before { content: ""; position: absolute; inset: 12px; border-radius: 50%; border: 1px dashed rgba(227,163,59,.35); }
+.cover .markbox svg { width: 56%; height: 56%; }
+.toc { border-top: 1px solid var(--rule-dk); }
+.toc .wrap { display: flex; flex-wrap: wrap; gap: 6px 30px; padding-block: 18px; }
+.toc a { text-decoration: none; font-size: 14px; color: var(--pale); }
+.toc a:hover { color: var(--gold); }
+.toc a .rn { margin-right: 6px; }
+@media (max-width: 860px) { .cover .wrap { grid-template-columns: 1fr; } .cover .markbox { order: -1; justify-self: start; width: 170px; } }
+
+/* logo */
+.lockups { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--rule-dk); }
+.lockups > figure { margin: 0; min-width: 0; display: flex; flex-direction: column; }
+.lockups > figure + figure { border-left: 1px solid var(--rule-dk); }
+.plate { aspect-ratio: 4 / 3; display: grid; place-items: center; padding: 24px; }
+.plate.n { background: var(--navy); }
+.plate.ni { background: var(--night); }
+.plate.iv { background: var(--ivory); color: var(--ink); }
+.lockups figcaption { padding: 16px 20px 20px; font-size: 14px; color: var(--mist); border-top: 1px solid var(--rule-dk); flex: 1; }
+.lockups figcaption b { display: block; color: var(--ivory); font-weight: 600; margin-bottom: 2px; }
+.lockup { display: flex; align-items: center; gap: 14px; }
+.lockup svg { width: 52px; height: 52px; flex: none; }
+.lockup b { display: block; font: 400 32px/1 var(--serif); letter-spacing: -.5px; font-variation-settings: "opsz" 72; }
+.lockup small { display: block; font: 600 9.5px/1.3 var(--sans); letter-spacing: 2.8px; color: var(--gold); margin-top: 6px; }
+.plate.iv .lockup small { color: var(--gold-ink); }
+.app { width: 120px; height: 120px; }
+.plate .bare { width: 46%; max-width: 140px; }
+@media (max-width: 860px) { .lockups { grid-template-columns: 1fr; } .lockups > figure + figure { border-left: 0; border-top: 1px solid var(--rule-dk); } }
+
+.anatomy { margin-top: 48px; display: grid; grid-template-columns: 280px 1fr; gap: 48px; align-items: center; }
+.anatomy svg { width: 100%; max-width: 280px; }
+.parts { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule-dk); }
+.parts li { display: grid; grid-template-columns: 36px 1fr; gap: 10px; padding: 14px 0; border-bottom: 1px solid var(--rule-dk); }
+.parts b { font-weight: 600; }
+.parts span { color: var(--mist); }
+@media (max-width: 860px) { .anatomy { grid-template-columns: 1fr; gap: 28px; } .anatomy svg { max-width: 220px; } }
+
+.rules2 { margin-top: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.rules2 h3 { font-family: var(--serif); font-size: 24px; margin-bottom: 14px; }
+.rules2 ul { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--rule-dk); }
+.rules2 li { padding: 11px 0 11px 22px; border-bottom: 1px solid var(--rule-dk); position: relative; color: var(--pale); font-size: 15.5px; }
+.rules2 li::before { position: absolute; left: 0; top: 11px; font-family: var(--serif); }
+.rules2 .do li::before { content: "✓"; color: var(--gold); }
+.rules2 .dont li::before { content: "✕"; color: var(--coral); }
+@media (max-width: 860px) { .rules2 { grid-template-columns: 1fr; } }
+
+/* colour */
+.swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.sw { border: 1px solid var(--rule); border-radius: 3px; overflow: hidden; background: var(--paper); min-width: 0; }
+.sw .chip { height: 108px; display: flex; align-items: flex-end; padding: 12px; font-family: var(--serif); font-size: 26px; }
+.sw .info { padding: 12px 14px 14px; }
+.sw .info b { display: block; font-weight: 600; font-size: 15px; }
+.sw .info code { color: var(--muted); }
+.sw .info p { font-size: 13.5px; color: var(--muted); margin-top: 6px; line-height: 1.45; }
+.sw button { margin-left: 6px; font: 600 9.5px var(--sans); letter-spacing: 1.6px; text-transform: uppercase; background: none; border: 1px solid var(--rule); color: var(--gold-ink); padding: 3px 6px; border-radius: 2px; cursor: pointer; }
+.sw button:hover { border-color: var(--gold-ink); }
+.group-h { font-family: var(--serif); font-size: 22px; margin: 44px 0 6px; }
+.group-h:first-of-type { margin-top: 0; }
+.group-p { color: var(--muted); margin-bottom: 18px; max-width: 44em; }
+.creator-band { margin-top: 18px; border-radius: 3px; padding: 30px 28px; color: var(--white); background: linear-gradient(140deg, var(--plum) 0%, #6B1F86 40%, var(--magenta) 78%, var(--coral) 100%); }
+.creator-band h3 { font-family: var(--serif); font-weight: 700; font-size: 28px; }
+.creator-band h3 em { color: var(--peach); font-weight: 500; }
+.creator-band p { color: #FBE6F0; margin-top: 6px; font-size: 14.5px; }
+.creator-band code { color: var(--peach); }
+.pairs { margin-top: 18px; overflow-x: auto; }
+.pairs table { width: 100%; border-collapse: collapse; min-width: 560px; font-size: 14.5px; }
+.pairs th, .pairs td { text-align: left; padding: 11px 12px 11px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.pairs th { font: 600 10.5px var(--sans); letter-spacing: 2px; text-transform: uppercase; color: var(--gold-ink); }
+.pairs .demo { display: inline-block; padding: 3px 10px; border-radius: 2px; font-weight: 600; }
+@media (max-width: 860px) { .swatches { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .swatches { grid-template-columns: 1fr; } }
+
+/* type */
+.faces { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--rule-dk); border-bottom: 1px solid var(--rule-dk); }
+.faces > div { padding: 32px 32px 32px 0; min-width: 0; }
+.faces > div + div { padding-left: 32px; border-left: 1px solid var(--rule-dk); }
+.faces .big { font-size: 84px; line-height: 1; margin: 14px 0 16px; }
+.faces .f1 .big { font-family: var(--serif); font-weight: 340; font-variation-settings: "opsz" 144; }
+.faces .f1 .big em { color: var(--gold); font-weight: 300; }
+.faces .f2 .big { font-family: var(--sans); font-weight: 600; letter-spacing: -2px; }
+.faces p { color: var(--mist); font-size: 15px; }
+.faces p + p { margin-top: 8px; }
+@media (max-width: 860px) { .faces { grid-template-columns: 1fr; } .faces > div { padding: 28px 0; } .faces > div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--rule-dk); } }
+.scale { margin-top: 40px; border-top: 1px solid var(--rule-dk); }
+.scale .row { display: grid; grid-template-columns: 170px 1fr; gap: 24px; padding: 18px 0; border-bottom: 1px solid var(--rule-dk); align-items: baseline; }
+.scale .row .k { font-size: 13px; color: var(--mist); }
+.scale .row .k b { display: block; color: var(--ivory); font-weight: 600; font-size: 14px; }
+.scale .row > div:last-child { min-width: 0; }
+.t-display { font-family: var(--serif); font-size: clamp(40px, 6vw, 72px); line-height: 1; letter-spacing: -1.6px; font-weight: 340; font-variation-settings: "opsz" 144; }
+.t-display em, .t-h2 em { color: var(--gold); }
+.t-h2 { font-family: var(--serif); font-size: clamp(30px, 4vw, 48px); line-height: 1.05; letter-spacing: -1px; font-weight: 360; }
+.t-h3 { font-family: var(--serif); font-size: 28px; line-height: 1.15; letter-spacing: -.3px; }
+.t-body { font-size: 17px; color: var(--pale); max-width: 34em; }
+.t-ital { font-family: var(--serif); font-style: italic; font-size: 20px; }
+@media (max-width: 600px) { .scale .row { grid-template-columns: 1fr; gap: 8px; } }
+
+/* components */
+.comp { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--rule); background: var(--paper); }
+.comp > div { padding: 30px; min-width: 0; }
+.comp > div:nth-child(even) { border-left: 1px solid var(--rule); }
+.comp > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+.comp h3 { font-family: var(--serif); font-size: 22px; margin-bottom: 4px; }
+.comp .note { color: var(--muted); font-size: 14.5px; margin-bottom: 20px; }
+.comp .stage { background: var(--navy); color: var(--ivory); padding: 26px; border-radius: 3px; display: flex; flex-wrap: wrap; gap: 16px 22px; align-items: center; }
+@media (max-width: 860px) { .comp { grid-template-columns: 1fr; } .comp > div:nth-child(even) { border-left: 0; } .comp > div + div { border-top: 1px solid var(--rule); } }
+
+.btn { position: relative; display: inline-flex; align-items: center; gap: 14px; font: 600 12px/1 var(--sans); letter-spacing: 2.5px; text-transform: uppercase; text-decoration: none; padding: 17px 22px 17px 24px; border-radius: 2px; border: 1px solid var(--gold); cursor: pointer; isolation: isolate; overflow: hidden; transition: color .35s ease, border-color .35s ease; }
+.btn::before { content: ""; position: absolute; inset: 4px; border: 1px dashed currentColor; opacity: .35; border-radius: 1px; pointer-events: none; transition: opacity .35s; }
+.btn::after { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--night); transform: scaleX(0); transform-origin: left; transition: transform .45s cubic-bezier(.22,1,.36,1); }
+.btn:hover::after { transform: scaleX(1); }
+.btn:hover::before { opacity: .7; }
+.btn-gold { background: var(--gold); color: var(--night); }
+.btn-gold:hover { color: var(--gold); }
+.btn-line { background: transparent; color: var(--ivory); border-color: var(--rule-dk); }
+.btn-line:hover { border-color: var(--gold); color: var(--gold); }
+.arr { position: relative; display: inline-block; width: 20px; height: 1px; background: currentColor; transition: width .35s cubic-bezier(.22,1,.36,1); }
+.arr::after { content: ""; position: absolute; right: 0; top: -3px; width: 6px; height: 6px; border: solid currentColor; border-width: 1px 1px 0 0; transform: rotate(45deg); }
+.btn:hover .arr { width: 32px; }
+.link { font-family: var(--serif); font-style: italic; font-size: 19px; text-decoration: none; color: inherit; background: linear-gradient(var(--gold), var(--gold)) 0 100% / 100% 1px no-repeat; padding-bottom: 3px; transition: background-size .35s ease, color .25s; }
+.link:hover { color: var(--gold); background-size: 0% 1px; background-position: 100% 100%; }
+.seal { flex: none; width: 74px; height: 74px; border-radius: 50%; border: 1px solid var(--gold); display: grid; place-items: center; text-align: center; font: 600 8px/1.35 var(--sans); letter-spacing: 1.2px; color: var(--gold); }
+.tagpill { font: 600 10px var(--sans); letter-spacing: 2px; color: var(--night); background: var(--gold); padding: 3px 7px; border-radius: 2px; }
+.rate { width: 100%; }
+.rate .line { display: flex; align-items: baseline; gap: 12px; }
+.rate h4 { margin: 0; font-family: var(--serif); font-size: 24px; font-weight: 380; white-space: nowrap; }
+.rate .dots { flex: 1; border-bottom: 1px dotted var(--mist); transform: translateY(-6px); min-width: 20px; }
+.rate .amt { font-family: var(--serif); font-size: 24px; color: var(--gold); white-space: nowrap; font-variant-numeric: lining-nums tabular-nums; }
+.rate .amt small { font-family: var(--sans); font-size: 13px; color: var(--mist); margin-left: 4px; }
+.hm-list { width: 100%; display: grid; gap: 0; }
+.hm-list div { display: flex; gap: 12px; align-items: baseline; padding: 10px 0; border-top: 1px solid var(--rule-dk); color: var(--pale); font-size: 15px; }
+.hm-list span { font-family: var(--serif); font-style: italic; color: var(--gold); }
+@media (prefers-reduced-motion: reduce) { .btn::after, .arr, .link { transition: none; } }
+
+/* motion */
+.motion { display: grid; grid-template-columns: 260px 1fr; gap: 48px; align-items: center; }
+.motion .stage2 { width: 100%; max-width: 260px; aspect-ratio: 1; border: 1px solid var(--rule-dk); border-radius: 50%; display: grid; place-items: center; }
+.motion .stage2 svg { width: 58%; }
+.motion ol { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--rule-dk); }
+.motion li { display: grid; grid-template-columns: 36px 1fr; gap: 10px; padding: 13px 0; border-bottom: 1px solid var(--rule-dk); color: var(--pale); }
+.motion .replay { margin-top: 22px; }
+@media (max-width: 860px) { .motion { grid-template-columns: 1fr; gap: 28px; } .motion .stage2 { max-width: 200px; } }
+.min, .hr { transform-origin: 32px 26px; transform-box: view-box; }
+.play .min { animation: rewind 3.6s cubic-bezier(.65,0,.35,1) .4s 1 both; }
+.play .hr { animation: hour 3.6s cubic-bezier(.65,0,.35,1) .4s 1 both; }
+.play .sun { animation: rise 3.6s cubic-bezier(.22,1,.36,1) .4s 1 both; }
+.play .water { animation: shimmer 3.6s ease .4s 1 both; }
+@keyframes rewind { 0%,8% { transform: rotate(0) } 42%,100% { transform: rotate(-360deg) } }
+@keyframes hour { 0%,8% { transform: rotate(0) } 42%,58% { transform: rotate(-30deg) } 92%,100% { transform: rotate(0) } }
+@keyframes rise { 0%,8% { transform: translateY(0) } 30%,46% { transform: translateY(9px) } 76%,100% { transform: translateY(0) } }
+@keyframes shimmer { 0%,8% { opacity: 1 } 30%,46% { opacity: .35 } 76%,100% { opacity: 1 } }
+@media (prefers-reduced-motion: reduce) { .min, .hr, .sun, .water { animation: none !important; } }
+
+/* voice */
+.voice { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; }
+.vrule { padding: 22px 0; border-top: 1px solid var(--rule); min-width: 0; }
+.vrule h3 { font-family: var(--serif); font-size: 22px; }
+.vrule p { color: var(--muted); margin-top: 6px; font-size: 15.5px; }
+.vrule .ex { margin-top: 12px; display: grid; gap: 6px; font-size: 14.5px; }
+.vrule .ex div { display: grid; grid-template-columns: 54px 1fr; gap: 8px; }
+.vrule .ex .y { color: var(--gold-ink); font: 600 10px/2 var(--sans); letter-spacing: 1.8px; text-transform: uppercase; }
+.vrule .ex .n { color: #B4432A; font: 600 10px/2 var(--sans); letter-spacing: 1.8px; text-transform: uppercase; }
+.vrule .ex q { quotes: "“" "”"; font-family: var(--serif); font-style: italic; }
+.vrule .ex .bad q { color: var(--muted); text-decoration: line-through; text-decoration-color: rgba(180,67,42,.5); }
+.lines { margin-top: 40px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--rule); background: var(--paper); }
+.lines > div { padding: 24px; min-width: 0; }
+.lines > div + div { border-left: 1px solid var(--rule); }
+.lines .cap { margin-bottom: 10px; }
+.lines p { font-family: var(--serif); font-size: 21px; line-height: 1.3; }
+.lines p em { color: var(--gold-ink); }
+@media (max-width: 860px) { .voice { grid-template-columns: 1fr; } .lines { grid-template-columns: 1fr; } .lines > div + div { border-left: 0; border-top: 1px solid var(--rule); } }
+
+/* files */
+.files { border-top: 1px solid var(--rule-dk); }
+.file { display: grid; grid-template-columns: 1.1fr 1.6fr auto; gap: 20px; padding: 16px 0; border-bottom: 1px solid var(--rule-dk); align-items: baseline; }
+.file code { color: var(--ivory); font-size: 14px; word-break: break-all; }
+.file span { color: var(--mist); font-size: 14.5px; }
+.file a { font: 600 10.5px var(--sans); letter-spacing: 2px; text-transform: uppercase; color: var(--gold); text-decoration: none; white-space: nowrap; }
+.file a:hover { text-decoration: underline; }
+@media (max-width: 700px) { .file { grid-template-columns: 1fr auto; } .file span { grid-column: 1 / -1; grid-row: 2; } }
+.gap-note { margin-top: 28px; padding: 18px 20px; border: 1px solid var(--rule-dk); border-radius: 3px; color: var(--pale); font-size: 15px; }
+.gap-note b { color: var(--gold); font-weight: 600; }
+footer { background: var(--night); color: var(--mist); border-top: 1px solid var(--rule-dk); }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-block: 26px; font-size: 13px; }
+footer i { font-family: var(--serif); color: var(--gold); }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <clipPath id="sky"><rect x="0" y="0" width="64" height="37.7"/></clipPath>
+    <symbol id="mark" viewBox="6 6 52 52">
+      <circle cx="32" cy="32" r="22" fill="none" stroke="currentColor" stroke-width="3"/>
+      <g clip-path="url(#sky)"><circle class="sun" cx="32" cy="39" r="8.4" fill="#E3A33B"/></g>
+      <path d="M17 39 H47" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+      <path class="water" d="M24 44.5 H40 M28.5 49.5 H35.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+      <path class="min" d="M32 26 V15" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+      <path class="hr" d="M32 26 L37.5 22.8" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+      <circle cx="32" cy="26" r="2.1" fill="currentColor"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="cover" id="top">
+  <div class="wrap">
+    <div>
+      <p class="cap">Brand guidelines · Edition 1 · November 2026</p>
+      <h1>The spare hour, <em>kept consistent.</em></h1>
+      <p class="sub">How Spare Hour looks and sounds: the mark, colour, type, the few pieces the website is built from, and the way we write. Everything here is taken from the live site, so the site and this book agree.</p>
+      <div class="meta">
+        <span><b>Owner</b> Adrian Patterson</span>
+        <span><b>Source of truth</b> spare-hour-site / index.html</span>
+        <span><b>Look</b> Navy ground, gold hairlines, ivory paper</span>
+      </div>
+    </div>
+    <div class="markbox" style="color: var(--ivory)"><svg aria-label="Spare Hour mark"><use href="#mark"/></svg></div>
+  </div>
+  <nav class="toc" aria-label="Chapters">
+    <div class="wrap">
+      <a href="#logo"><span class="rn">i</span>Logo</a>
+      <a href="#colour"><span class="rn">ii</span>Colour</a>
+      <a href="#type"><span class="rn">iii</span>Type</a>
+      <a href="#pieces"><span class="rn">iv</span>Pieces</a>
+      <a href="#motion"><span class="rn">v</span>Motion</a>
+      <a href="#voice"><span class="rn">vi</span>Voice</a>
+      <a href="#files"><span class="rn">vii</span>Files</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section class="ch dark" id="logo">
+  <div class="wrap">
+    <div class="sh">
+      <p class="cap">i · Logo</p>
+      <div>
+        <h2>A clock that gives <em>the hour back.</em></h2>
+        <p>The mark is a clock face with a sun setting on water: the hour of the day you get to keep. It is always drawn, never typed, and it always comes from the master SVG.</p>
+      </div>
+    </div>
+
+    <div class="lockups">
+      <figure>
+        <div class="plate ni" style="color: var(--ivory)">
+          <div class="lockup"><svg aria-hidden="true"><use href="#mark"/></svg><span><b>spare hour</b><small>BY ADRIAN PATTERSON</small></span></div>
+        </div>
+        <figcaption><b>Primary lockup</b>Mark plus wordmark, on navy or night. Used in the site header. Drop the byline below about 480px wide.</figcaption>
+      </figure>
+      <figure>
+        <div class="plate iv" style="color: var(--ink)">
+          <div class="lockup"><svg aria-hidden="true"><use href="#mark"/></svg><span><b>spare hour</b><small>BY ADRIAN PATTERSON</small></span></div>
+        </div>
+        <figcaption><b>On paper</b>Strokes switch to ink <code>#13212E</code>, the byline to gold ink. The sun stays gold.</figcaption>
+      </figure>
+      <figure>
+        <div class="plate n">
+          <svg class="app" viewBox="0 0 64 64" aria-label="App icon">
+            <rect width="64" height="64" rx="15" fill="#13212E"/>
+            <g transform="translate(32 32) scale(.82) translate(-32 -32)" style="color: #F6F3EE">
+              <circle cx="32" cy="32" r="22" fill="none" stroke="currentColor" stroke-width="3"/>
+              <g clip-path="url(#sky)"><circle cx="32" cy="39" r="8.4" fill="#E3A33B"/></g>
+              <path d="M17 39 H47" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+              <path d="M24 44.5 H40 M28.5 49.5 H35.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+              <path d="M32 26 V15" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+              <path d="M32 26 L37.5 22.8" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+              <circle cx="32" cy="26" r="2.1" fill="currentColor"/>
+            </g>
+          </svg>
+        </div>
+        <figcaption><b>Icon tile</b>The mark at 82% inside a navy square, corner radius 15 on a 64 grid. This is <code>favicon.svg</code> and the phone icon.</figcaption>
+      </figure>
+    </div>
+
+    <div class="anatomy">
+      <svg viewBox="0 0 64 64" aria-label="Mark anatomy" style="color: var(--ivory)">
+        <use href="#mark" x="6" y="6" width="52" height="52"/>
+      </svg>
+      <ol class="parts">
+        <li><span class="rn">i</span><div><b>The dial.</b> <span>A ring, stroke 3 on a 64 grid, radius 22. Ivory on dark, ink on paper.</span></div></li>
+        <li><span class="rn">ii</span><div><b>The hands.</b> <span>Minute hand straight up, hour hand at about two o'clock, stroke 2.8 with round caps, pinned by a small hub.</span></div></li>
+        <li><span class="rn">iii</span><div><b>The sun.</b> <span>The only filled colour, always gold <code>#E3A33B</code>, cut off at the horizon.</span></div></li>
+        <li><span class="rn">iv</span><div><b>The horizon and water.</b> <span>One long line and two shorter ripples, stroke 2.6.</span></div></li>
+        <li><span class="rn">v</span><div><b>The wordmark.</b> <span>"spare hour" in lowercase Fraunces Regular, optical size 72, tracked −0.4px. The byline is Inter Semibold caps, tracked 2.6px, in gold.</span></div></li>
+      </ol>
+    </div>
+
+    <div class="rules2">
+      <div class="do">
+        <h3>Do</h3>
+        <ul>
+          <li>Keep clear space of at least the sun's width on every side.</li>
+          <li>Keep the mark 24px or larger on screen. Under that, use the icon tile.</li>
+          <li>Use ivory strokes on navy or night, and ink strokes on ivory or paper.</li>
+          <li>Write the name as "Spare Hour" in sentences. The lowercase form belongs to the wordmark only.</li>
+        </ul>
+      </div>
+      <div class="dont">
+        <h3>Don't</h3>
+        <ul>
+          <li>Recolour the sun, or fill the dial.</li>
+          <li>Put the mark on the creator gradient or on a busy photo.</li>
+          <li>Set the wordmark in any face other than Fraunces, or in caps.</li>
+          <li>Stretch, rotate, outline or add a drop shadow to the mark. The one soft shadow on the hero dial is a site detail, not part of the logo.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ch paper" id="colour">
+  <div class="wrap">
+    <div class="sh">
+      <p class="cap">ii · Colour</p>
+      <div>
+        <h2>Navy for the evening, <em>gold for the hour.</em></h2>
+        <p>Two families: the core palette for everything, and a creator palette kept for the creators-and-coaches offer. Gold is the only accent in the core set. Use it for the one thing that should catch the eye.</p>
+      </div>
+    </div>
+
+    <h3 class="group-h">Core</h3>
+    <p class="group-p">Dark grounds carry the brand. Paper sections give the page room to breathe between them.</p>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#13212E;color:#F6F3EE">Aa</div><div class="info"><b>Navy</b><code>#13212E</code><button type="button" data-hex="#13212E">Copy</button><p>Main ground. Also "ink": the text colour on paper.</p></div></div>
+      <div class="sw"><div class="chip" style="background:#0E1924;color:#F6F3EE">Aa</div><div class="info"><b>Night</b><code>#0E1924</code><button type="button" data-hex="#0E1924">Copy</button><p>Header, footer, the deepest edge of gradients, and text on gold buttons.</p></div></div>
+      <div class="sw"><div class="chip" style="background:#E3A33B;color:#0E1924">Aa</div><div class="info"><b>Gold</b><code>#E3A33B</code><button type="button" data-hex="#E3A33B">Copy</button><p>The sun, primary buttons, labels and italic accents on dark.</p></div></div>
+      <div class="sw"><div class="chip" style="background:#F6F3EE;color:#13212E">Aa</div><div class="info"><b>Ivory</b><code>#F6F3EE</code><button type="button" data-hex="#F6F3EE">Copy</button><p>Text on dark, logo strokes, and paper section ground.</p></div></div>
+      <div class="sw"><div class="chip" style="background:#8A5A12;color:#F6F3EE">Aa</div><div class="info"><b>Gold ink</b><code>#8A5A12</code><button type="button" data-hex="#8A5A12">Copy</button><p>Gold for paper. Labels, numerals and italic accents on ivory.</p></div></div>
+      <div class="sw"><div class="chip" style="background:#C99A4E;color:#0E1924">Aa</div><div class="info"><b>Gold soft</b><code>#C99A4E</code><button type="button" data-hex="#C99A4E">Copy</button><p>A quieter gold for secondary details.</p></div></div>
+      <div class="sw"><div class="chip" style="background:#FBF9F5;color:#13212E">Aa</div><div class="info"><b>Paper</b><code>#FBF9F5</code><button type="button" data-hex="#FBF9F5">Copy</button><p>A lighter card on an ivory section.</p></div></div>
+      <div class="sw"><div class="chip" style="background:#1A2B3B;color:#F6F3EE">Aa</div><div class="info"><b>Navy 2</b><code>#1A2B3B</code><button type="button" data-hex="#1A2B3B">Copy</button><p>A raised surface on navy.</p></div></div>
+    </div>
+
+    <h3 class="group-h">Neutrals and rules</h3>
+    <p class="group-p">Greys lean slightly blue, toward the navy, so they never read as plain grey.</p>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#5B636B;color:#F6F3EE">Aa</div><div class="info"><b>Muted</b><code>#5B636B</code><button type="button" data-hex="#5B636B">Copy</button><p>Body copy on paper.</p></div></div>
+      <div class="sw"><div class="chip" style="background:#A7B0BA;color:#0E1924">Aa</div><div class="info"><b>Mist</b><code>#A7B0BA</code><button type="button" data-hex="#A7B0BA">Copy</button><p>Secondary text and nav links on dark.</p></div></div>
+      <div class="sw"><div class="chip" style="background:#D5DAE0;color:#13212E">Aa</div><div class="info"><b>Pale</b><code>#D5DAE0</code><button type="button" data-hex="#D5DAE0">Copy</button><p>Lead paragraphs on dark.</p></div></div>
+      <div class="sw"><div class="chip" style="background:linear-gradient(90deg,#2A3A4A 50%,#E3E0DA 50%);color:#F6F3EE">&nbsp;</div><div class="info"><b>Rules</b><code>#2A3A4A</code> · <code>#E3E0DA</code><p>Hairlines on dark, then on paper. Always 1px.</p></div></div>
+    </div>
+
+    <h3 class="group-h">Creator palette</h3>
+    <p class="group-p">Only for the creators-and-coaches offer, and only as the 140° gradient below with white text. It never appears in the logo or on the business side.</p>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#3A1260;color:#fff">Aa</div><div class="info"><b>Plum</b><code>#3A1260</code><button type="button" data-hex="#3A1260">Copy</button></div></div>
+      <div class="sw"><div class="chip" style="background:#E3347D;color:#fff">Aa</div><div class="info"><b>Magenta</b><code>#E3347D</code><button type="button" data-hex="#E3347D">Copy</button></div></div>
+      <div class="sw"><div class="chip" style="background:#FF7A59;color:#13212E">Aa</div><div class="info"><b>Coral</b><code>#FF7A59</code><button type="button" data-hex="#FF7A59">Copy</button></div></div>
+      <div class="sw"><div class="chip" style="background:#FFD3B8;color:#3A1260">Aa</div><div class="info"><b>Peach</b><code>#FFD3B8</code><button type="button" data-hex="#FFD3B8">Copy</button><p>Labels and italic accents on the gradient.</p></div></div>
+    </div>
+    <div class="creator-band">
+      <p class="cap" style="color: var(--peach)">For creators and coaches</p>
+      <h3>You create. <em>The system sells.</em></h3>
+      <p><code>linear-gradient(140deg, #3A1260 0%, #6B1F86 40%, #E3347D 78%, #FF7A59 100%)</code></p>
+    </div>
+
+    <h3 class="group-h">Approved pairings</h3>
+    <div class="pairs">
+      <table>
+        <thead><tr><th>Text</th><th>On</th><th>Use for</th></tr></thead>
+        <tbody>
+          <tr><td><span class="demo" style="background:#13212E;color:#F6F3EE">Ivory</span></td><td>Navy or night</td><td>Headlines and body on dark</td></tr>
+          <tr><td><span class="demo" style="background:#13212E;color:#E3A33B">Gold</span></td><td>Navy or night</td><td>Labels, italic accents, prices, numerals</td></tr>
+          <tr><td><span class="demo" style="background:#E3A33B;color:#0E1924">Night</span></td><td>Gold</td><td>Primary buttons and small tags</td></tr>
+          <tr><td><span class="demo" style="background:#F6F3EE;color:#13212E">Ink</span></td><td>Ivory or paper</td><td>Headlines on paper</td></tr>
+          <tr><td><span class="demo" style="background:#F6F3EE;color:#8A5A12">Gold ink</span></td><td>Ivory or paper</td><td>Labels and accents on paper. Never use bright gold for text on paper.</td></tr>
+          <tr><td><span class="demo" style="background:#F6F3EE;color:#5B636B">Muted</span></td><td>Ivory or paper</td><td>Body copy on paper</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="ch dark" id="type">
+  <div class="wrap">
+    <div class="sh">
+      <p class="cap">iii · Type</p>
+      <div>
+        <h2>An editorial serif, <em>a working sans.</em></h2>
+        <p>Fraunces carries the voice: headlines, numerals, prices and italic asides. Inter does the work: body, buttons and labels. Both are free on Google Fonts.</p>
+      </div>
+    </div>
+    <div class="faces">
+      <div class="f1">
+        <p class="cap">Display · Fraunces</p>
+        <p class="big">Aa <em>Hh</em></p>
+        <p>Variable, weights 300 to 700 with italics. Headlines sit light, between 320 and 400. Turn optical sizing on so large sizes get the fine-cut forms.</p>
+        <p>Fallback: Iowan Old Style, Georgia, serif.</p>
+      </div>
+      <div class="f2">
+        <p class="cap">Text · Inter</p>
+        <p class="big">Aa Hh</p>
+        <p>Weights 400 to 800. Body at 400, labels and buttons at 600 in spaced uppercase.</p>
+        <p>Fallback: Helvetica Neue, Arial, sans-serif.</p>
+      </div>
+    </div>
+
+    <div class="scale">
+      <div class="row"><div class="k"><b>Display</b>Fraunces 340 · 50–100px · −2px · line 0.98</div><div><p class="t-display">Made to measure. <em>Your hour, given back.</em></p></div></div>
+      <div class="row"><div class="k"><b>Section head</b>Fraunces 360 · 36–60px · −1.2px</div><div><p class="t-h2">Plain pricing. <em>Quoted up front.</em></p></div></div>
+      <div class="row"><div class="k"><b>Item head</b>Fraunces 400 · 25–32px</div><div><p class="t-h3">Follow-ups that send themselves</p></div></div>
+      <div class="row"><div class="k"><b>Body</b>Inter 400 · 17px · line 1.65</div><div><p class="t-body">Custom AI systems for local businesses and creators. Built on the tools you already use, in your voice.</p></div></div>
+      <div class="row"><div class="k"><b>Aside and link</b>Fraunces italic · 18–20px</div><div><p class="t-ital">Find your lost hours</p></div></div>
+      <div class="row"><div class="k"><b>Label</b>Inter 600 caps · 11–12px · 3px tracking</div><div><p class="cap">Trumbull, Connecticut · By appointment</p></div></div>
+    </div>
+    <div class="gap-note"><b>The gold word.</b> Most headlines end on an italic phrase in gold (gold ink on paper). One per headline, and only the closing phrase.</div>
+  </div>
+</section>
+
+<section class="ch paper" id="pieces">
+  <div class="wrap">
+    <div class="sh">
+      <p class="cap">iv · Pieces</p>
+      <div>
+        <h2>Tailored, <em>not templated.</em></h2>
+        <p>The site borrows from a tailor's shop and a watchmaker's card: stitched labels, roman numerals, dotted price leaders, a hallmark seal. Corners stay nearly square, at 2 to 4px.</p>
+      </div>
+    </div>
+    <div class="comp">
+      <div>
+        <h3>Buttons</h3>
+        <p class="note">A tailor's label: squared corners, spaced caps, an inner dashed stitch, and a drawn arrow that lengthens on hover. Gold for the one main action, outline for the rest.</p>
+        <div class="stage">
+          <a class="btn btn-gold" href="#pieces">Book a free call <span class="arr"></span></a>
+          <a class="btn btn-line" href="#pieces">See the work <span class="arr"></span></a>
+        </div>
+      </div>
+      <div>
+        <h3>Text link</h3>
+        <p class="note">Serif italic with a gold underline that pulls away on hover. Use it for the quieter second action next to a button.</p>
+        <div class="stage"><a class="link" href="#pieces">Find your lost hours</a></div>
+      </div>
+      <div>
+        <h3>Price line</h3>
+        <p class="note">Name, dotted leader, price in gold Fraunces with tabular figures. The unit sits small in Inter.</p>
+        <div class="stage">
+          <div class="rate"><div class="line"><h4>By the hour</h4><span class="dots"></span><span class="amt">$85<small>/ hour</small></span></div></div>
+          <div class="rate"><div class="line"><h4>Kept running</h4><span class="dots"></span><span class="amt">from $129<small>/ month</small></span></div></div>
+        </div>
+      </div>
+      <div>
+        <h3>Hallmarks, seal and tag</h3>
+        <p class="note">Lists are numbered in lowercase roman, italic, in gold. A round seal marks the founding-client offer. Small gold tags flag one item.</p>
+        <div class="stage">
+          <div class="hm-list">
+            <div><span>i.</span> No new software to buy</div>
+            <div><span>ii.</span> Nothing sends without your OK</div>
+          </div>
+          <div class="seal">FOUNDING<br>CLIENT</div>
+          <span class="tagpill">START HERE</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ch dark" id="motion">
+  <div class="wrap">
+    <div class="sh">
+      <p class="cap">v · Motion</p>
+      <div>
+        <h2>The hour rewinds <em>once.</em></h2>
+        <p>The mark has one animation, which plays a single time on page load and never loops. Anyone who has reduced motion turned on sees the mark at rest.</p>
+      </div>
+    </div>
+    <div class="motion">
+      <div class="stage2" id="mstage" style="color: var(--ivory)"><svg viewBox="6 6 52 52" aria-label="Animated mark"><defs><clipPath id="skym"><rect width="64" height="37.7"/></clipPath></defs><circle cx="32" cy="32" r="22" fill="none" stroke="currentColor" stroke-width="3"/><g clip-path="url(#skym)"><circle class="sun" cx="32" cy="39" r="8.4" fill="#E3A33B"/></g><path d="M17 39 H47" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path class="water" d="M24 44.5 H40 M28.5 49.5 H35.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path class="min" d="M32 26 V15" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/><path class="hr" d="M32 26 L37.5 22.8" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/><circle cx="32" cy="26" r="2.1" fill="currentColor"/></svg></div>
+      <div>
+        <ol>
+          <li><span class="rn">i</span><span>The minute hand rewinds a full turn and the hour hand steps back one hour.</span></li>
+          <li><span class="rn">ii</span><span>Meanwhile the sun dips below the horizon and the water dims.</span></li>
+          <li><span class="rn">iii</span><span>The sun rises again and the hour hand returns. 3.6 seconds in all, after a 0.4 second pause.</span></li>
+        </ol>
+        <button class="btn btn-line replay" type="button" id="replay">Play it again <span class="arr"></span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ch paper" id="voice">
+  <div class="wrap">
+    <div class="sh">
+      <p class="cap">vi · Voice</p>
+      <div>
+        <h2>A neighbour <em>who builds things.</em></h2>
+        <p>Spare Hour talks like Adrian across a counter: first person, short sentences, plain words. The reader is a busy owner or creator, so every line should save them time.</p>
+      </div>
+    </div>
+    <div class="voice">
+      <div class="vrule">
+        <h3>Short and plain</h3>
+        <p>Short sentences. Name the tool the reader already uses, not the technology behind it.</p>
+        <div class="ex"><div class="good"><span class="y">Yes</span><q>Drafts your everyday replies. Hands you the rest.</q></div><div class="bad"><span class="n">No</span><q>An LLM-powered omnichannel response pipeline.</q></div></div>
+      </div>
+      <div class="vrule">
+        <h3>Hours, not features</h3>
+        <p>Lead with the time given back and the job that disappears.</p>
+        <div class="ex"><div class="good"><span class="y">Yes</span><q>A month of posts in twenty minutes.</q></div><div class="bad"><span class="n">No</span><q>Advanced AI content generation capabilities.</q></div></div>
+      </div>
+      <div class="vrule">
+        <h3>The owner stays in charge</h3>
+        <p>Say plainly that nothing goes out without approval and the price is agreed first.</p>
+        <div class="ex"><div class="good"><span class="y">Yes</span><q>Nothing goes out until you approve it.</q></div><div class="bad"><span class="n">No</span><q>Fully autonomous, set and forget.</q></div></div>
+      </div>
+      <div class="vrule">
+        <h3>The tailoring words, used lightly</h3>
+        <p>Measure, cut, fit, made to measure. Use them in headlines and the process steps, at most one per paragraph.</p>
+        <div class="ex"><div class="good"><span class="y">Yes</span><q>Measured first. Cut to fit.</q></div><div class="bad"><span class="n">No</span><q>Our bespoke, hand-stitched, artisanal AI.</q></div></div>
+      </div>
+      <div class="vrule">
+        <h3>Local and personal</h3>
+        <p>Trumbull is named. Adrian signs his own work. Say "I", not "we" or "our team".</p>
+        <div class="ex"><div class="good"><span class="y">Yes</span><q>I build it with you, show you how it runs, and it stays yours.</q></div><div class="bad"><span class="n">No</span><q>Our team of experts delivers solutions.</q></div></div>
+      </div>
+      <div class="vrule">
+        <h3>No hype</h3>
+        <p>No exclamation marks, "revolutionary" or "game-changing", and no invented numbers. Prices are stated, not hinted at.</p>
+        <div class="ex"><div class="good"><span class="y">Yes</span><q>Plain pricing. Quoted up front.</q></div><div class="bad"><span class="n">No</span><q>Unlock 10x growth today!</q></div></div>
+      </div>
+    </div>
+    <div class="lines">
+      <div><p class="cap">Promise</p><p>Made to measure. <em>Your hour, given back.</em></p></div>
+      <div><p class="cap">One-liner</p><p>Custom AI systems that give Trumbull businesses and creators their hours back.</p></div>
+      <div><p class="cap">Call to action</p><p>Book a call. <em>Get an hour back.</em></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="ch dark" id="files">
+  <div class="wrap">
+    <div class="sh">
+      <p class="cap">vii · Files</p>
+      <div>
+        <h2>Where everything <em>lives.</em></h2>
+        <p>All brand files live in the <code>apatterson-droid/spare-hour-site</code> repository on GitHub, branch <code>main</code>. The colours and type on this page come from the <code>:root</code> block at the top of <code>index.html</code>. When the two disagree, the site wins and this page gets updated.</p>
+      </div>
+    </div>
+    <div class="files">
+      <div class="file"><code>favicon.svg</code><span>Master logo: the mark in a navy icon tile, 64 grid. Start every logo use here.</span><a href="https://github.com/apatterson-droid/spare-hour-site/blob/main/favicon.svg">Open</a></div>
+      <div class="file"><code>apple-touch-icon.png</code><span>The icon tile as a PNG for phone home screens.</span><a href="https://github.com/apatterson-droid/spare-hour-site/blob/main/apple-touch-icon.png">Open</a></div>
+      <div class="file"><code>og-image.jpg</code><span>Link preview card for texts and social posts.</span><a href="https://github.com/apatterson-droid/spare-hour-site/blob/main/og-image.jpg">Open</a></div>
+      <div class="file"><code>index.html</code><span>The website. Its <code>:root</code> block holds the colour and font tokens, and the header holds the full lockup SVG.</span><a href="https://github.com/apatterson-droid/spare-hour-site/blob/main/index.html">Open</a></div>
+      <div class="file"><code>hero.mp4 · hero.webm · hero-poster.jpg</code><span>Hero background film, shown at 42% opacity under a navy wash.</span><a href="https://github.com/apatterson-droid/spare-hour-site/tree/main">Open</a></div>
+      <div class="file"><code>adrian.jpg</code><span>Founder portrait, cropped 4:5, with an inset gold hairline frame.</span><a href="https://github.com/apatterson-droid/spare-hour-site/blob/main/adrian.jpg">Open</a></div>
+      <div class="file"><code>Live site</code><span>apatterson-droid.github.io/spare-hour-site, served by GitHub Pages from main.</span><a href="https://apatterson-droid.github.io/spare-hour-site/">Visit</a></div>
+    </div>
+    <div class="gap-note"><b>Not made yet.</b> There is no standalone lockup file (mark plus wordmark), no single-colour version of the mark, and no print-resolution PNG. Export them from the header SVG in <code>index.html</code> when a printer or partner asks.</div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><i>spare hour</i> by Adrian Patterson · Trumbull, Connecticut</span>
+    <span>Brand guidelines, edition 1 · November 2026</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var stage = document.getElementById("mstage");
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function play() {
+    if (reduce) return;
+    stage.classList.remove("play");
+    void stage.offsetWidth;
+    stage.classList.add("play");
+  }
+  play();
+  document.getElementById("replay").addEventListener("click", play);
+
+  document.querySelectorAll(".sw button[data-hex]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var hex = b.getAttribute("data-hex");
+      function done(ok) { b.textContent = ok ? "Copied" : hex; setTimeout(function () { b.textContent = "Copy"; }, 1400); }
+      try {
+        navigator.clipboard.writeText(hex).then(function () { done(true); }, function () { done(false); });
+      } catch (e) { done(false); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
